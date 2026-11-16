@@ -1,0 +1,61 @@
+# Colégio 1º Mundo – Hortolândia/SP
+# Todos os robôs, inclusive os de busca com IA, podem ler o site.
+
+User-agent: *
+Allow: /
+
+# Buscadores
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# IA – OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# IA – Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# IA – Google (Gemini / AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# IA – Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# IA – Microsoft Copilot, Apple, Meta e outros
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://www.colegio1mundohortolandia.com.br/sitemap.xml
