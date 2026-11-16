@@ -116,3 +116,27 @@ footer .copy{text-align:center;opacity:.6;font-size:.85rem;margin-top:1.6rem}
   .ficha div{flex-direction:column;gap:.2rem}.ficha dd{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1}}
+
+/* Educação Infantil */
+.difs-inf .num h3{font-size:1.15rem;margin:.4rem 0 .2rem}
+.difs-inf .num strong{font-size:2.4rem}
+.horarios{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:860px;margin-inline:auto}
+.horarios h3{font-size:1.6rem;margin-bottom:.8rem}
+.horarios ul{list-style:none}
+.horarios li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px dashed #ecd3d8;font-size:1.05rem}
+.horarios li:last-child{border:0}
+.horarios li span{color:var(--cinza);font-weight:700}
+@media (max-width:700px){.horarios{grid-template-columns:1fr}}
+
+/* Fundamental / Médio */
+.difs-3{grid-template-columns:repeat(3,1fr)}
+.grupos-difs{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.6rem}
+.grupo{background:#fff;border-radius:var(--raio);box-shadow:var(--sombra);padding:1.6rem}
+.grupo h3{font-size:1.4rem;margin-bottom:.6rem}
+.grupo .item{display:flex;gap:1rem;align-items:flex-start;padding:.8rem 0;border-top:1px dashed #ecd3d8}
+.grupo .item strong{font-size:1.8rem;line-height:1}
+.grupo .item b{display:block;color:var(--vinho);font-family:Fredoka;font-weight:600;font-size:1.1rem}
+.grupo .item span{color:var(--cinza)}
+.horarios.um{grid-template-columns:1fr;max-width:460px}
+@media (max-width:900px){.difs-3{grid-template-columns:1fr 1fr}.grupos-difs{grid-template-columns:1fr}}
+@media (max-width:560px){.difs-3{grid-template-columns:1fr}}

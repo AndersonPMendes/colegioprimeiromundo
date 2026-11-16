@@ -168,6 +168,11 @@
   }
   @media (max-width:560px){.difs{grid-template-columns:1fr}.trilho .foto{width:240px;height:300px}.trilho .foto:nth-child(even){height:260px}}
   @media (prefers-reduced-motion:reduce){.js .rv{opacity:1}}
+  .cta-ensino{text-align:center;margin-top:3.2rem}
+  #btn-conhecer{position:relative;font-size:1.15rem;padding:1.1rem 2.1rem}
+  #btn-conhecer::before{content:"";position:absolute;inset:0;border-radius:inherit;border:3px solid var(--amarelo);animation:anel-pulso 1.8s ease-out infinite;pointer-events:none}
+  @keyframes anel-pulso{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.35,1.7);opacity:0}}
+  @media (prefers-reduced-motion:reduce){#btn-conhecer::before{animation:none}}
 </style>
 <link rel="canonical" href="https://www.colegio1mundohortolandia.com.br/">
 <meta property="og:type" content="website">
@@ -324,8 +329,8 @@
     <div>
       <span class="tag rv">O Colégio</span>
       <div class="titulo rv" style="margin-bottom:1rem">
-        <h2>Mais do que uma escola: somos a Família 1º Mundo.</h2>
-        <p>No Colégio 1º Mundo buscamos proporcionar ao seu filho um ensino que o ajude a alcançar a excelência, preparando-o desde a Educação Infantil até o Ensino Médio para ser bem-sucedido na vida profissional e pessoal e, assim, transformar o mundo.</p>
+        <h2>Mais do que ensinar, queremos fazer parte de cada história.</h2>
+        <p>No Colégio 1º Mundo, cada aluno é único. Da Educação Infantil ao Ensino Médio, unimos ensino de qualidade, acolhimento e parceria com as famílias para formar pessoas preparadas para os desafios da vida.</p>
       </div>
       <div class="valores">
         <div class="valor rv"><i style="background:#fff4cc">💛</i><div><h3>Ambiente acolhedor</h3><p>Um lugar seguro e afetivo, onde cada aluno é conhecido pelo nome.</p></div></div>
@@ -346,16 +351,22 @@
     <div class="cards">
       <article class="card rv">
         <div class="foto" data-label="Foto Educação Infantil"><img src="assets/foto-06.jpg" alt="Educação Infantil"></div>
-        <div class="corpo"><span class="pill" style="background:var(--verde)">Educação Infantil</span><h3>Primeiros passos</h3><p>Brincar, explorar e descobrir o mundo com segurança, afeto e muita criatividade.</p></div>
+        <div class="corpo"><span class="pill" style="background:var(--verde)">Educação Infantil</span><h3>Primeiros passos</h3><p>Brincar, explorar e descobrir o mundo com segurança, afeto e muita criatividade.</p><a href="educacao-infantil.html" class="btn btn-azul" style="margin-top:1rem;padding:.6rem 1.1rem;font-size:.9rem">Saiba mais sobre o Infantil →</a></div>
       </article>
       <article class="card rv">
         <div class="foto" data-label="Foto Fundamental"><img src="assets/foto-07.jpg" alt="Ensino Fundamental"></div>
-        <div class="corpo"><span class="pill" style="background:var(--azul-2)">Ensino Fundamental</span><h3>Base sólida</h3><p>Alfabetização, raciocínio e projetos que tornam o conhecimento vivo, do 1º ao 9º ano.</p></div>
+        <div class="corpo"><span class="pill" style="background:var(--azul-2)">Ensino Fundamental</span><h3>Base sólida</h3><p>Alfabetização, raciocínio e projetos que tornam o conhecimento vivo, do 1º ao 9º ano.</p><a href="ensino-fundamental.html" class="btn btn-azul" style="margin-top:1rem;padding:.6rem 1.1rem;font-size:.9rem">Saiba mais sobre o Fundamental →</a></div>
       </article>
       <article class="card rv">
         <div class="foto" data-label="Foto Médio"><img src="assets/foto-08.jpg" alt="Ensino Médio"></div>
-        <div class="corpo"><span class="pill" style="background:var(--azul)">Ensino Médio</span><h3>Rumo ao futuro</h3><p>Pensamento crítico, autonomia e preparo para o vestibular e a vida, até o terceirão.</p></div>
+        <div class="corpo"><span class="pill" style="background:var(--azul)">Ensino Médio</span><h3>Rumo ao futuro</h3><p>Pensamento crítico, autonomia e preparo para o vestibular e a vida, até o terceirão.</p><a href="ensino-medio.html" class="btn btn-azul" style="margin-top:1rem;padding:.6rem 1.1rem;font-size:.9rem">Saiba mais sobre o Médio →</a></div>
       </article>
+    </div>
+    <div class="cta-ensino">
+      <a id="btn-conhecer" class="btn btn-amarelo" href="https://wa.me/5519981146159?text=Ol%C3%A1!%20Quero%20agendar%20uma%20visita%20ao%20Col%C3%A9gio%201%C2%BA%20Mundo." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.4.3-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.2 1.2 3.1 1.3 1.9 3 3.4 5 4.3.6.2 1.1.4 1.7.5.6.1 1.3.1 1.9-.1.7-.2 1.2-.7 1.5-1.3.1-.3.1-.7 0-1-.1-.1-.3-.2-.5-.3z"/></svg>
+        Venha conhecer o nosso colégio
+      </a>
     </div>
   </div>
 </section>
@@ -437,7 +448,7 @@
       </a>
       <div>Av. Santana, nº 1674 – Parque Ortolândia, Hortolândia – SP<br>(19) 3518-0520 · WhatsApp (19) 98114-6159</div>
     </div>
-    <nav style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;font-weight:700"><a href="sobre.html">Sobre</a><a href="ensino-bilingue.html">Ensino Bilíngue</a><a href="perguntas-frequentes.html">Perguntas frequentes</a><a href="bio.html">Links</a></nav>
+    <nav style="display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-top:1.6rem;font-weight:700"><a href="sobre.html">Sobre</a><a href="educacao-infantil.html">Educação Infantil</a><a href="ensino-fundamental.html">Ensino Fundamental</a><a href="ensino-medio.html">Ensino Médio</a><a href="ensino-bilingue.html">Ensino Bilíngue</a><a href="perguntas-frequentes.html">Perguntas frequentes</a><a href="bio.html">Links</a></nav>
     <small>© <span id="ano"></span> Colégio 1º Mundo. Todos os direitos reservados.</small>
   </div>
 </footer>
@@ -512,6 +523,9 @@
     c.addEventListener('pointerenter',()=>animate(c,{y:-10,scale:1.02},{type:'spring',stiffness:300,damping:18}));
     c.addEventListener('pointerleave',()=>animate(c,{y:0,scale:1},{type:'spring',stiffness:300,damping:18}));
   });
+
+  // Botão "Venha conhecer o nosso colégio" pulsando
+  animate('#btn-conhecer',{scale:[1,1.07,1]},{duration:1.8,repeat:Infinity,ease:'easeInOut'});
 
   // Botão flutuante pulsando
   animate('.whats',{scale:[1,1.1,1]},{duration:1.8,repeat:Infinity,ease:'easeInOut'});
