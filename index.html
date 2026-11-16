@@ -173,6 +173,26 @@
   #btn-conhecer::before{content:"";position:absolute;inset:0;border-radius:inherit;border:3px solid var(--amarelo);animation:anel-pulso 1.8s ease-out infinite;pointer-events:none}
   @keyframes anel-pulso{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.35,1.7);opacity:0}}
   @media (prefers-reduced-motion:reduce){#btn-conhecer::before{animation:none}}
+  /* Submenu Ensino */
+  .sub{position:relative}
+  .sub-tit{display:inline-flex;align-items:center;gap:.25rem}
+  .seta-sub{font-size:.75em;display:inline-block;transition:transform .25s}
+  .sub:hover .seta-sub,.sub:focus-within .seta-sub{transform:rotate(180deg)}
+  .sub-menu{position:absolute;top:100%;left:50%;translate:-50% 0;margin-top:14px;min-width:290px;background:#fff;border-radius:18px;padding:.5rem;box-shadow:0 24px 50px -18px rgba(0,0,0,.4);display:grid;gap:.15rem;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:60}
+  .sub-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+  .sub:hover .sub-menu,.sub:focus-within .sub-menu{opacity:1;visibility:visible;transform:none}
+  .sub-menu a{display:flex;gap:.8rem;align-items:center;padding:.7rem .8rem;border-radius:12px;color:var(--tinta)!important}
+  .sub-menu a::after{display:none}
+  .sub-menu a:hover{background:var(--ceu)}
+  .sub-menu i{font-style:normal;font-size:1.4rem;width:40px;height:40px;border-radius:12px;background:var(--ceu);display:grid;place-items:center;flex:none}
+  .sub-menu span{font-weight:800;color:var(--azul);line-height:1.2}
+  .sub-menu small{display:block;font-weight:600;color:var(--cinza);font-size:.78rem;margin-top:.15rem}
+  @media (max-width:960px){
+    .sub-menu{position:static;translate:none;opacity:1;visibility:visible;transform:none;box-shadow:none;padding:.3rem 0 0 .6rem;margin:0;min-width:0}
+    .sub-menu::before{display:none}
+    .sub-menu i{width:32px;height:32px;font-size:1.1rem}
+    .seta-sub{display:none}
+  }
 </style>
 <link rel="canonical" href="https://www.colegio1mundohortolandia.com.br/">
 <meta property="og:type" content="website">
@@ -276,7 +296,14 @@
     <nav class="menu" id="menu">
       <a href="sobre.html">Sobre</a>
       <a href="ensino-bilingue.html">Bilíngue</a>
-      <a href="#ensino">Ensino</a>
+      <div class="sub">
+        <a href="#ensino" class="sub-tit" aria-haspopup="true">Ensino <span class="seta-sub">▾</span></a>
+        <div class="sub-menu">
+          <a href="educacao-infantil.html"><i>🧸</i><span>Educação Infantil<small>Maternal ao Pré 2 · 3 a 5 anos</small></span></a>
+          <a href="ensino-fundamental.html"><i>📚</i><span>Ensino Fundamental<small>1º ao 9º ano</small></span></a>
+          <a href="ensino-medio.html"><i>🎓</i><span>Ensino Médio<small>Preparação para ENEM e vestibulares</small></span></a>
+        </div>
+      </div>
       <a href="#galeria">Galeria</a>
       <a href="perguntas-frequentes.html">Dúvidas</a>
       <a href="#contato">Contato</a>
@@ -523,6 +550,12 @@
     c.addEventListener('pointerenter',()=>animate(c,{y:-10,scale:1.02},{type:'spring',stiffness:300,damping:18}));
     c.addEventListener('pointerleave',()=>animate(c,{y:0,scale:1},{type:'spring',stiffness:300,damping:18}));
   });
+
+  // Submenu Ensino: itens entram em cascata
+  const sub=document.querySelector('.sub');
+  if(sub && matchMedia('(min-width:961px)').matches){
+    sub.addEventListener('pointerenter',()=>animate('.sub-menu a',{opacity:[0,1],x:[-12,0]},{duration:.3,delay:stagger(.05)}));
+  }
 
   // Botão "Venha conhecer o nosso colégio" pulsando
   animate('#btn-conhecer',{scale:[1,1.07,1]},{duration:1.8,repeat:Infinity,ease:'easeInOut'});

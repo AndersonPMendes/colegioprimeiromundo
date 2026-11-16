@@ -140,3 +140,24 @@ footer .copy{text-align:center;opacity:.6;font-size:.85rem;margin-top:1.6rem}
 .horarios.um{grid-template-columns:1fr;max-width:460px}
 @media (max-width:900px){.difs-3{grid-template-columns:1fr 1fr}.grupos-difs{grid-template-columns:1fr}}
 @media (max-width:560px){.difs-3{grid-template-columns:1fr}}
+
+/* Submenu Ensino */
+.sub{position:relative}
+.sub-tit{display:inline-flex;align-items:center;gap:.25rem}
+.seta-sub{font-size:.75em;display:inline-block;transition:transform .25s}
+.sub:hover .seta-sub,.sub:focus-within .seta-sub{transform:rotate(180deg)}
+.sub-menu{position:absolute;top:100%;left:50%;translate:-50% 0;margin-top:14px;min-width:290px;background:#fff;border-radius:18px;padding:.5rem;box-shadow:0 24px 50px -18px rgba(0,0,0,.4);display:grid;gap:.15rem;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s,transform .2s,visibility .2s;z-index:60}
+.sub-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.sub:hover .sub-menu,.sub:focus-within .sub-menu{opacity:1;visibility:visible;transform:none}
+.menu .sub-menu a{display:flex;gap:.8rem;align-items:center;padding:.7rem .8rem;border-radius:12px;color:var(--tinta)}
+.menu .sub-menu a::after{display:none}
+.sub-menu a:hover,.sub-menu a[aria-current="page"]{background:var(--rosa)}
+.sub-menu i{font-style:normal;font-size:1.4rem;width:40px;height:40px;border-radius:12px;background:var(--rosa);display:grid;place-items:center;flex:none}
+.sub-menu span{font-weight:800;color:var(--vinho);line-height:1.2}
+.sub-menu small{display:block;font-weight:600;color:var(--cinza);font-size:.78rem;margin-top:.15rem}
+@media (max-width:900px){
+  .sub-menu{position:static;translate:none;opacity:1;visibility:visible;transform:none;box-shadow:none;padding:.3rem 0 0 .6rem;margin:0;min-width:0}
+  .sub-menu::before{display:none}
+  .sub-menu i{width:32px;height:32px;font-size:1.1rem}
+  .seta-sub{display:none}
+}

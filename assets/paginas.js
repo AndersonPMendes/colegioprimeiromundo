@@ -43,5 +43,9 @@ window.addEventListener('load',function(){
     c.addEventListener('pointerenter',function(){animate(c,{y:-8},{type:'spring',stiffness:300,damping:18})});
     c.addEventListener('pointerleave',function(){animate(c,{y:0},{type:'spring',stiffness:300,damping:18})});
   });
+  var sub=document.querySelector('.sub');
+  if(sub && matchMedia('(min-width:901px)').matches){
+    sub.addEventListener('pointerenter',function(){animate('.sub-menu a',{opacity:[0,1],x:[-12,0]},{duration:.3,delay:stagger(.05)})});
+  }
   animate('.whats',{scale:[1,1.1,1]},{duration:1.8,repeat:Infinity,ease:'easeInOut'});
 });
